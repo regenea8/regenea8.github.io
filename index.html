@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $("#crawling-run").on("click", function() {
+                crawling();
+            });
+        });
+
+        function crawling() {
+            var content = $("#crawling-text").val();
+            var result = [];
+            var appText = "";
+
+            var startText = $("#crawling-start-text").val();
+            var endText = $("#crawling-end-text").val();
+            
+            while (content.indexOf(startText) != -1) {
+                content = content.substring(content.indexOf(startText));
+                result.push(content.substring(0, content.indexOf(endText) + endText.length));
+                appText = appText + content.substring(0, content.indexOf(endText) + endText.length) + "\n";
+                content = content.substring(content.indexOf(endText) + endText.length);
+            }
+
+            console.dir(result);
+            $("#crawling-result").val(appText);
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <h2>Text Document Editor Version 0.1</h2>
+            <p>Crawling, ..... </p>
+        </div>
+        <div class="form-group" id="crawling">
+            <label for="crawling-text">Crawling Content:</label>
+            <textarea class="form-control" rows="10" id="crawling-text" style="resize: none;"></textarea>
+            <div class="form-group">
+                <label for="crawling-start-text">Start Text:</label>
+                <input type="text" class="form-control" id="crawling-start-text">
+            </div>
+            <div class="form-group">
+                <label for="crawling-end-text">End Text:</label>
+                <input type="text" class="form-control" id="crawling-end-text">
+            </div>
+            <label for="crawling-result">Crawling Result:</label>
+            <textarea class="form-control" rows="10" id="crawling-result" style="resize: none;"></textarea>
+            <button type="button" class="btn btn-primary btn-block" id="crawling-run">Run</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
