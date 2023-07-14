@@ -22,8 +22,9 @@
 ```lua
 local spellID   = 10060
 local spellLink = select(1, GetSpellLink(spellID))
+SendChatMessage("Casting on " .. spellLink, "PARTY")
 ```
-> [마력 주입]
+> Casting on [마력 주입]
 
 ## 3. 
 ```
