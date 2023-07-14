@@ -1,12 +1,12 @@
 목차
 ===
-[1. event](#1-event)
+[1. API event](#1-API-event)
 
 [2. API functions](#2-api-functions)
 
 
 
-# 1. event
+# 1. API event
 
 ## 1.1 [UNIT_SPELLCAST_SUCCEEDED](https://wowpedia.fandom.com/wiki/UNIT_SPELLCAST_SUCCEEDED): unitTarget, castGUID, spellID
 
