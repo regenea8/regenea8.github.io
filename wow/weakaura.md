@@ -15,7 +15,7 @@
 
 # 2. API functions
 
-## 2.2 [GetSpellLink](https://wowpedia.fandom.com/wiki/API_GetSpellLink): GetSpellLink(spellId), GetSpellLink(spellName)
+## 2.1 [GetSpellLink](https://wowpedia.fandom.com/wiki/API_GetSpellLink): GetSpellLink(spellId), GetSpellLink(spellName)
 
 주문에 대한 하이퍼링크를 반환합니다.
 
