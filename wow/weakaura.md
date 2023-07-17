@@ -30,14 +30,14 @@ end
 
 # 2. API functions
 
-## 2.1 [GetSpellLink(spellID)](https://wowpedia.fandom.com/wiki/API_GetSpellLink): GetSpellLink(spellId), GetSpellLink(spellName)
+## 2.1 [GetSpellLink(spellId)](https://wowpedia.fandom.com/wiki/API_GetSpellLink)
 
 주문에 대한 하이퍼링크를 반환합니다.
 
 **Example**
 ```lua
-local spellID = 10060 -- 주문 ID로 사용할 값 (원하는 주문 ID로 변경해야 함)
-local spellLink = select(1, GetSpellLink(spellID)) -- 주문 ID를 링크 형식으로 가져옵니다.
+local spellId = 10060 -- 주문 ID로 사용할 값 (원하는 주문 ID로 변경해야 함)
+local spellLink = select(1, GetSpellLink(spellId)) -- 주문 ID를 링크 형식으로 가져옵니다.
 SendChatMessage("Casting on " .. spellLink, "PARTY") -- 주문 시전 정보를 파티 채팅으로 전송합니다.
 
 ```
