@@ -15,12 +15,12 @@
 **Example**
 ```lua
 function(event, unitTarget, castGUID, spellID)
-    if event == "UNIT_SPELLCAST_SUCCEEDED" then
-        local name, realm = UnitName(unitTarget)
-        if IsInGroup() then
-            if spellID == 453 then
-                local spellLink = select(1, GetSpellLink(spellID))
-                SendChatMessage(name .. " Casting on " .. spellLink, "PARTY")
+    if event == "UNIT_SPELLCAST_SUCCEEDED" then -- 주문 시전 성공 이벤트인 경우
+        local name, realm = UnitName(unitTarget) -- 유닛의 이름과 서버명을 가져옵니다.
+        if IsInGroup() then -- 플레이어가 파티에 속해 있는지 확인합니다.
+            if spellID == 453 then -- 주문 ID가 453인 경우 (원하는 주문 ID로 변경해야 함)
+                local spellLink = select(1, GetSpellLink(spellID)) -- 주문 ID를 링크 형식으로 가져옵니다.
+                SendChatMessage(name .. " Casting on " .. spellLink, "PARTY") -- 주문 시전 정보를 파티 채팅으로 전송합니다.
             end
         end
     end
@@ -36,14 +36,14 @@ end
 
 **Example**
 ```lua
-local spellID   = 10060
-local spellLink = select(1, GetSpellLink(spellID))
-SendChatMessage("Casting on " .. spellLink, "PARTY")
+local spellID = 10060 -- 주문 ID로 사용할 값 (원하는 주문 ID로 변경해야 함)
+local spellLink = select(1, GetSpellLink(spellID)) -- 주문 ID를 링크 형식으로 가져옵니다.
+SendChatMessage("Casting on " .. spellLink, "PARTY") -- 주문 시전 정보를 파티 채팅으로 전송합니다.
+
 ```
 > Casting on [마력 주입]
 
 ## 2.2 [SetRaidTarget(unit, index)](https://wowpedia.fandom.com/wiki/API_SetRaidTarget)
-
 
 
 **Example**
