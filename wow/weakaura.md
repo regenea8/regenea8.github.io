@@ -34,7 +34,7 @@ end
 
 주문에 대한 하이퍼링크를 반환합니다.
 
-*Example*
+**Example**
 ```lua
 local spellID   = 10060
 local spellLink = select(1, GetSpellLink(spellID))
