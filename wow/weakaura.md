@@ -57,6 +57,12 @@ SetRaidTarget("mouseover", 6) -- 네모
 SetRaidTarget("mouseover", 7) -- 엑스
 SetRaidTarget("mouseover", 8) -- 해골
 ```
+```lua
+local targetIndex = GetRaidTargetIndex("mouseover") -- 마우스 오버한 대상의 징표 번호를 가져옵니다.
+if targetIndex ~= 8 then -- 현재 할당된 징표 번호가 8이 아닌 경우에만 실행합니다.
+    SetRaidTarget("mouseover", 8) -- 해골 징표를 할당합니다.
+end
+```
 
 # 3. 
 ```
