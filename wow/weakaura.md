@@ -30,7 +30,7 @@ end
 
 # 2. API functions
 
-## 2.1 [GetSpellLink](https://wowpedia.fandom.com/wiki/API_GetSpellLink): GetSpellLink(spellId), GetSpellLink(spellName)
+## 2.1 [GetSpellLink(spellID)](https://wowpedia.fandom.com/wiki/API_GetSpellLink): GetSpellLink(spellId), GetSpellLink(spellName)
 
 주문에 대한 하이퍼링크를 반환합니다.
 
@@ -42,9 +42,25 @@ SendChatMessage("Casting on " .. spellLink, "PARTY")
 ```
 > Casting on [마력 주입]
 
-## 3. 
+## 2.2 [SetRaidTarget(unit, index)](https://wowpedia.fandom.com/wiki/API_SetRaidTarget)
+
+
+
+**Example**
+```lua
+SetRaidTarget("mouseover", 1) -- 별
+SetRaidTarget("mouseover", 2) -- 동그라미
+SetRaidTarget("mouseover", 3) -- 다이아
+SetRaidTarget("mouseover", 4) -- 역삼
+SetRaidTarget("mouseover", 5) -- 달
+SetRaidTarget("mouseover", 6) -- 네모
+SetRaidTarget("mouseover", 7) -- 엑스
+SetRaidTarget("mouseover", 8) -- 해골
+```
+
+# 3. 
 ```
 ```
-## 4.
+# 4.
 ```
 ```
