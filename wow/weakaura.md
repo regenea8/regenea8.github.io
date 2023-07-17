@@ -46,7 +46,7 @@ SendChatMessage("Casting on " .. spellLink, "PARTY") -- 주문 시전 정보를 
 ## 2.2 [SetRaidTarget(unit, index)](https://wowpedia.fandom.com/wiki/API_SetRaidTarget)
 
 
-**Example**
+**Example 1**
 ```lua
 SetRaidTarget("mouseover", 1) -- 별
 SetRaidTarget("mouseover", 2) -- 동그라미
@@ -57,6 +57,7 @@ SetRaidTarget("mouseover", 6) -- 네모
 SetRaidTarget("mouseover", 7) -- 엑스
 SetRaidTarget("mouseover", 8) -- 해골
 ```
+**Example 2**
 ```lua
 local targetIndex = GetRaidTargetIndex("mouseover") -- 마우스 오버한 대상의 징표 번호를 가져옵니다.
 if targetIndex ~= 8 then -- 현재 할당된 징표 번호가 8이 아닌 경우에만 실행합니다.
